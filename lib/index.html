@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <body>
+      <canvas width="1000" height="700" id="game-canvas"></canvas>
+        <!-- order of scripts matter! script cant rely on script called after it -->
+        <script type="application/javascript" src="./util.js"></script>
+        <script type="application/javascript" src="./movingObject.js"></script>
+        <script type="application/javascript" src="./keymaster.js"></script>
+        <script type="application/javascript" src="./ship.js"></script>
+        <script type="application/javascript" src="./asteroid.js"></script>
+        <script type="application/javascript" src="./game.js"></script>
+        <script type="application/javascript" src="./gameView.js"></script>
+          <script type="application/javascript">
+            var canvas = document.getElementById("game-canvas");
+            var ctx = canvas.getContext('2d');
+            var game = new Asteroids.Game();
+            var gameView = new Asteroids.GameView(game, ctx)
+            gameView.start()
+          </script>
+    </body>
+  </head>
+</html>
