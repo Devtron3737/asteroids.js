@@ -1,0 +1,1 @@
+web: node asteroids.js
