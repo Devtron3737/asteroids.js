@@ -1,6 +1,0 @@
-Add a Ship#power(impulse). The impulse should be added to
- the current velocity of the ship.
-
-Add a GameView#bindKeyHandlers method. Check out the
- keymaster library. Bind keys to call Ship#power on the game's
-  ship. Install the handlers on GameView#start.
