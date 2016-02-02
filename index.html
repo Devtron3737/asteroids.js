@@ -1,24 +1,29 @@
 <html>
   <head>
-    <body>
-      <canvas width="1000" height="700" id="game-canvas"></canvas>
-        <!-- order of scripts matter! script cant rely on script called after it -->
-        <script type="application/javascript" src="lib/util.js"></script>
-        <script type="application/javascript" src="lib/movingObject.js"></script>
-        <script type="application/javascript" src="lib/keymaster.js"></script>
-        <script type="application/javascript" src="lib/ship.js"></script>
-        <script type="application/javascript" src="lib/bullet.js"></script>
-        <script type="application/javascript" src="lib/asteroid.js"></script>
-        <script type="application/javascript" src="lib/game.js"></script>
-        <script type="application/javascript" src="lib/gameView.js"></script>
-        
-          <script type="application/javascript">
-            var canvas = document.getElementById("game-canvas");
-            var ctx = canvas.getContext('2d');
-            var game = new Asteroids.Game();
-            var gameView = new Asteroids.GameView(game, ctx)
-            gameView.start()
-          </script>
-    </body>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/asteroids.css" type="text/css">
   </head>
+
+  <body>
+    <canvas width="1000" height="700" id="game-canvas"></canvas>
+    <div id='welcome'>Welcome to Asteroids!</div>
+    <div id='directions'>Use a, w, s, and d keys to move. Spacebar to shoot!</div>
+
+    <script type="application/javascript" src="lib/util.js"></script>
+    <script type="application/javascript" src="lib/movingObject.js"></script>
+    <script type="application/javascript" src="lib/keymaster.js"></script>
+    <script type="application/javascript" src="lib/ship.js"></script>
+    <script type="application/javascript" src="lib/bullet.js"></script>
+    <script type="application/javascript" src="lib/asteroid.js"></script>
+    <script type="application/javascript" src="lib/game.js"></script>
+    <script type="application/javascript" src="lib/gameView.js"></script>
+
+    <script type="application/javascript">
+      var canvas = document.getElementById("game-canvas");
+      var ctx = canvas.getContext('2d');
+      var game = new Asteroids.Game();
+      var gameView = new Asteroids.GameView(game, ctx)
+      gameView.start()
+    </script>
+  </body>
 </html>
